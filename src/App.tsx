@@ -1,13 +1,13 @@
-import WaveLine from "./Wave";
+import WaveLine from './Wave';
 
 const App = () => {
   return (
-    <div className="container mx-auto px-4 min-h-screen bg-[#f5f5f5]">
+    <div className="container mx-auto min-h-screen overflow-hidden bg-[#f5f5f5] px-4">
       <div className="diagonal-bg hidden sm:block" />
       <div className="tachie" />
 
-      <header className="flex justify-between items-center pt-6 pb-1">
-        <h1 className="text-3xl md:text-4xl font-quicksand font-bold">{`kaai.dev </>`}</h1>
+      <header className="flex items-center justify-between pb-1 pt-6">
+        <h1 className="font-quicksand text-3xl font-bold">{`kaai.dev </>`}</h1>
       </header>
 
       <div className="waveline w-50% h-6">
@@ -64,22 +64,22 @@ const App = () => {
           </div>
 
           <section className="character-info mb-4">
-            <h2 className="text-md font-bold text-gray-500">Character</h2>
-            <div className="text-gray-400">
+            <h2 className="text-sm font-bold text-gray-500">Character</h2>
+            <div className="text-xs text-gray-400">
               <p>Kanban Musume 華愛あさな "Kaai Asana"</p>
               <ul>
                 <li>Character Design: 园葵_Aoi & はるゐろは</li>
                 <li>Illustration: 园葵_Aoi</li>
               </ul>
-              <p className="text-sm">Copyright Reserved</p>
+              <p className="text-xs">Copyright Reserved</p>
             </div>
           </section>
 
           <section className="attribution">
-            <h2 className="text-md font-bold text-gray-500">Attribution</h2>
-            <div className="text-gray-400">
+            <h2 className="text-sm font-bold text-gray-500">Attribution</h2>
+            <div className="text-xs text-gray-400">
               <p>Icon: Solar Icon Set by 480 Design</p>
-              <p className="text-sm">Licensed under CC BY 4.0</p>
+              <p className="text-xs">Licensed under CC BY 4.0</p>
             </div>
           </section>
         </footer>
