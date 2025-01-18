@@ -42,6 +42,10 @@ nav {
   }
 }
 
+.nav-link {
+  @apply flex items-center;
+}
+
 .nav-icon {
   @apply ml-2 text-[2rem] md:text-[3rem];
   background: linear-gradient(45deg, #e9455d, #e77387);
