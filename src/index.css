@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import '@fontsource/maple-mono';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    @apply antialiased bg-[#f5f5f5];
+  }
+}
+
+.waveline path {
+  stroke-dasharray: 123px;
+  stroke-dashoffset: 123px;
+  animation: waveMove 1.5s ease-out forwards;
+  animation-delay: 0.7s;
+}
+
+nav {
+  @apply flex flex-col gap-2;
+}
+
+.nav-item {
+  @apply flex items-center w-fit text-[3rem] md:text-[4rem] leading-tight font-bold text-gray-700 transition-all duration-300 cursor-pointer pl-[3px];
+}
+
+.nav-item:hover {
+  @apply text-[4rem] md:text-[5rem];
+  background: linear-gradient(45deg, #e9455d, #e77387);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: translateX(1rem);
+}
+
+.nav-icon {
+  @apply text-[2.5rem] md:text-[3.5rem] ml-2;
+  background: linear-gradient(45deg, #e9455d, #e77387);
+}
+
+.diagonal-bg {
+  @apply absolute top-0 right-[-10%] w-[60%] h-full bg-[#faf8f7] -skew-x-12 z-0;
+}
+
+.tachie {
+  @apply absolute top-[50%] mt-[-380px] invisible md:visible md:-right-[5%] lg:right-[0%] 2xl:right-[10%] w-[500px] h-[750px] bg-contain bg-no-repeat bg-bottom opacity-0;
+  background-image: url("https://img.ayame.network/LANDING/tachie.webp");
+  animation: characterIn 1s ease-out forwards;
+  animation-delay: 3s;
+}
+
+header {
+  @apply opacity-0;
+  animation: headerIn 0.5s ease forwards;
+  animation-delay: 0.2s;
+}
+
+main {
+  @apply opacity-0;
+  animation: mainIn 0.8s ease forwards;
+  animation-delay: 2.2s;
+}
+
+@keyframes waveMove {
+  0% {
+    stroke-dashoffset: 123px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes characterIn {
+  0% {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+  100% {
+    opacity: 0.8;
+    transform: translateX(0);
+  }
+}
+
+@keyframes headerIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mainIn {
+  0% {
+    opacity: 0;
+    transform: translateY(48px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
