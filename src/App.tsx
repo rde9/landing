@@ -1,13 +1,50 @@
+import { useEffect } from 'react';
+import anime from 'animejs';
 import WaveLine from './Wave';
 
 const App = () => {
+  useEffect(() => {
+    anime
+      .timeline({})
+      .add({
+        targets: '.letter',
+        translateX: [-32, 0],
+        opacity: [0, 1],
+        filter: ['blur(5px)', 'blur(0px)'],
+        easing: 'easeOutExpo',
+        duration: 800,
+        delay: (_, i) => 500 + 150 * i,
+      })
+      .add({
+        targets: '.sign',
+        opacity: [0, 1],
+        filter: ['blur(5px)', 'blur(0px)'],
+        easing: 'easeOutCubic',
+        duration: 1200,
+        delay: (_, i) => 1500 + 50 * i,
+      });
+  }, []);
+
   return (
     <div className="container mx-auto min-h-screen overflow-hidden bg-[#f5f5f5] px-4">
-      <div className="diagonal-bg hidden sm:block" />
+      <div className="diagonal-bg" />
       <div className="tachie" />
 
       <header className="flex items-center justify-between pb-1 pt-6">
-        <h1 className="font-quicksand text-3xl font-bold">{`kaai.dev </>`}</h1>
+        <h1 className="font-quicksand text-3xl font-bold">
+          <span className="letter">k</span>
+          <span className="letter">a</span>
+          <span className="letter">a</span>
+          <span className="letter">i</span>
+          <span className="letter">.</span>
+          <span className="letter">d</span>
+          <span className="letter">e</span>
+          <span className="letter">v</span>
+          <span className="letter"> </span>
+          <span className="sign">&lt;</span>
+          <span className="sign">/</span>
+          <span className="sign">&gt;</span>
+        </h1>
       </header>
 
       <div className="waveline w-50% h-6">

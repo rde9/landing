@@ -12,15 +12,14 @@
   }
 
   body {
-    @apply bg-[#f5f5f5] antialiased;
+    @apply overflow-clip bg-[#f5f5f5] antialiased;
   }
 }
 
 .waveline path {
   stroke-dasharray: 123px;
   stroke-dashoffset: 123px;
-  animation: waveMove 1.5s ease-out forwards;
-  animation-delay: 0.7s;
+  animation: waveMove 2s ease-out forwards;
 }
 
 nav {
@@ -52,11 +51,11 @@ nav {
 }
 
 .diagonal-bg {
-  @apply absolute right-[-10%] top-0 z-0 h-full w-[60%] -skew-x-12 bg-[#faf8f7];
+  @apply absolute right-[-20%] top-0 z-0 h-full w-[70%] -skew-x-12 bg-[#faf8f7] sm:right-[-10%] sm:w-[60%];
 }
 
 .tachie {
-  @apply hidden absolute bg-contain bg-no-repeat opacity-0 sm:block left-[60%] lg:left-[70%];
+  @apply absolute left-[60%] hidden bg-contain bg-no-repeat opacity-0 sm:block lg:left-[70%];
   background-image: url('https://img.ayame.network/LANDING/tachie.webp');
   height: clamp(500px, 90vh, 100vh);
   width: calc(90vh * 1722 / 3623);
@@ -65,11 +64,11 @@ nav {
   animation-delay: 3s;
 }
 
-header {
+/* header {
   @apply opacity-0;
   animation: headerIn 0.5s ease forwards;
   animation-delay: 0.2s;
-}
+} */
 
 main {
   @apply relative max-h-full overflow-y-auto opacity-0;

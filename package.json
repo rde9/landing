@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@fontsource/maple-mono": "^5.0.1",
+    "animejs": "^3.2.2",
     "cal-sans": "^1.0.1",
     "lucide-react": "^0.471.1",
     "react": "^18.3.1",
@@ -21,6 +22,7 @@
     "@eslint/js": "^9.17.0",
     "@iconify/json": "^2.2.295",
     "@iconify/tailwind": "^1.2.0",
+    "@types/animejs": "^3.1.12",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
