@@ -21,6 +21,18 @@ const mPlus1 = M_PLUS_1({
 export const metadata: Metadata = {
   title: 'kaai.dev',
   description: "rde9's personal website",
+  openGraph: {
+    title: 'kaai.dev',
+    description: "rde9's personal website",
+    images: [
+      {
+        url: 'https://f005.backblazeb2.com/file/t292-periphery-2qb3e7c5/camera-og.png',
+        width: 1728,
+        height: 1044,
+        alt: 'Artist: 咲里キリコ',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
