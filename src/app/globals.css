@@ -3,11 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --c-border: #e5e7eb;
-  --c-border-icon: #d4cfc8;
   --background: #faf8f7;
   --foreground: #15151c;
   --foreground-secondary: #707170;
+
+  --c-border: #e5e7eb;
+  --c-border-icon: #d4cfc8;
+  --c-featured-text: var(--background);
+  --c-none: none;
+
   --font-body: 'M PLUS 1', ui-sans-serif, sans-serif;
 }
 
@@ -20,10 +24,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --c-border: #2d2d2d;
-    --background: #0a0a0a;
+    --background: #1c1c1c;
     --foreground: #ededed;
     --foreground-secondary: #b0b0b0;
+
+    --c-border: #333333;
+    --c-featured-text: currentColor;
+    --c-none: currentColor;
   }
 }
 

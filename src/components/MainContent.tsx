@@ -32,7 +32,7 @@ const MainContent: React.FC = () => {
                       alt={category.title}
                       className="size-full scale-105 object-cover transition-all duration-500 group-hover:scale-100 group-hover:blur-sm"
                     />
-                    <span className="absolute inset-0 flex scale-100 items-center justify-center font-featured text-featured font-bold leading-featured tracking-featured text-bg opacity-0 mix-blend-luminosity transition-all duration-500 group-hover:scale-105 group-hover:opacity-100">
+                    <span className="absolute inset-0 flex scale-100 items-center justify-center font-featured text-featured font-bold leading-featured tracking-featured text-featured-text opacity-0 mix-blend-luminosity transition-all duration-500 group-hover:scale-105 group-hover:opacity-100">
                       {category.title}
                     </span>
                   </Link>

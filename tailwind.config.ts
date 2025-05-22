@@ -15,6 +15,7 @@ const config: Config = {
       colors: {
         'border-light': 'var(--c-border)',
         'border-icon': 'var(--c-border-icon)',
+        'featured-text': 'var(--c-featured-text)',
         bg: 'var(--background)',
         fg: 'var(--foreground)',
         'fg-secondary': 'var(--foreground-secondary)',
